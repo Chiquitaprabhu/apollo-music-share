@@ -1,11 +1,26 @@
+import { AppBar, makeStyles, Toolbar, Typography } from "@material-ui/core";
+import createTypography from "@material-ui/core/styles/createTypography";
+import { HeadsetTwoTone } from "@material-ui/icons";
 import React from "react";
 
-function Header() {
 
+const useStyles = makeStyles( theme => ({
+    title: {
+        marginLeft: theme.spacing(2)
+    }
+}));
+function Header() {
+    const classes = useStyles();
     return(
-        <div>
-            Header
-        </div>
+        <AppBar  color="primary" postion='fixed'>
+            <Toolbar>
+                <HeadsetTwoTone/>
+                <Typography className={classes.title} variant="h6" component="h1">
+                    Apollo Music Share
+                </Typography>
+            </Toolbar>
+
+        </AppBar>
     )
     
 }
