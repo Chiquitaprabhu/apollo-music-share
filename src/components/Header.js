@@ -9,6 +9,7 @@ const useStyles = makeStyles( theme => ({
         marginLeft: theme.spacing(2)
     }
 }));
+
 function Header() {
     const classes = useStyles();
     return(
